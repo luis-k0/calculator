@@ -5,14 +5,14 @@ import calculate from "../logic/calculate";
 import "./App.css";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: null,
-      next: null,
-      operation: null,
-    };
-  }
+  state = {
+    total: null,
+    next: null,
+    operation: null,
+  };
+  // constructor(props) {
+  //   super(props);
+  // }
 
   handleClick = buttonName => {
     this.setState(calculate(this.state, buttonName));
