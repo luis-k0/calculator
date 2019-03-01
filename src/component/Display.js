@@ -13,6 +13,7 @@ import "./Display.css";
 //   }
 // }
 const display = props => {
+  console.log("display", props.value);
   return (
     <div className="component-display">
       <div>{props.value}</div>
