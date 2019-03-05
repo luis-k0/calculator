@@ -18,21 +18,20 @@ const app = props => {
   });
 
   const handleClick = buttonName => {
+    // console.log(this.state);
     // this.setState(calculate(this.state, buttonName));
+    // console.log(this.state);
+
     console.log("buttonName", buttonName);
+    console.log("memo", memo);
     setMemo(calculate(memo, buttonName));
     console.log("memo", memo);
-    console.log(
-      '{memo.next || memo.total || "0"}',
-      memo.next || memo.total || "0",
-    );
   };
 
   // render() {
   return (
     <div className="component-app">
       <Display value={memo.next || memo.total || "0"} />
-      {/* <Display value={memo.next} /> */}
       <ButtonPanel clickHandler={handleClick} />
     </div>
   );
